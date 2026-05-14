@@ -5,7 +5,7 @@ plugins {
 
 android {
     compileSdk rootProject.ext.compileSdkVersion
-
+`namespace`=`com.example.vcamera2`
     defaultConfig {
         applicationId rootProject.ext.masterPkg
         minSdkVersion rootProject.ext.minSdkVersion
