@@ -5,7 +5,8 @@ plugins {
 
 android {
     compileSdk rootProject.ext.compileSdkVersion
-(namespace)=(com.example.vcamera2)
+    namespace = "com.example.vcamera2"
+    
     defaultConfig {
         applicationId rootProject.ext.masterPkg
         minSdkVersion rootProject.ext.minSdkVersion
@@ -34,23 +35,17 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    dexOptions {
-        preDexLibraries false
-        maxProcessCount 8
-        javaMaxHeapSize "4g"
-    }
+    
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    aaptOptions {
-        cruncherEnabled = false
-        useNewCruncher = false
-    }
+    
     testOptions {
         unitTests.returnDefaultValues = true
     }
-    lintOptions {
+    
+    lint {
         checkReleaseBuilds false
         abortOnError false
         warningsAsErrors false
